@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>VaultFootage — Original 4K Stock, Ready to License</title>
+  <meta name="description" content="Premium 4K stock footage. Commercial rights included. Instant downloads.">
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles/main.css">
+  <link rel="stylesheet" href="styles/cinematic.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+</head>
+<body>
+  <div class="vf-loader"><div class="vf-loader-logo">VF</div></div>
+  <canvas id="vf-particles" aria-hidden="true"></canvas>
+
+  <header class="vf-header">
+    <div class="vf-header-inner">
+      <a href="/" class="vf-logo"><div class="vf-logo-circle">VF</div><span>VaultFootage</span></a>
+      <nav class="vf-nav">
+        <a href="/">Home</a>
+        <a href="#collections">Collections</a>
+        <a href="pricing.html">Pricing</a>
+        <a href="#faq">FAQ</a>
+        <a href="welcome/full.html" class="vf-link-cta">Open your access</a>
+      </nav>
+    </div>
+  </header>
+
+  <section class="vf-hero-cinematic">
+    <video class="vf-hero-video" autoplay muted loop playsinline id="hero-video"></video>
+    <div class="vf-hero-overlay"></div>
+    <div class="vf-hero-content">
+      <h1 class="vf-hero-title">Original 4K Stock, Without The Wait</h1>
+      <p class="vf-hero-subtitle">Curated • Exclusive • Updated Daily</p>
+      <div class="vf-hero-ctas">
+        <a data-plan="monthly" class="vf-btn vf-btn-primary vf-btn-glow" href="#">Start with £29/mo</a>
+        <a data-plan="trial10" class="vf-btn vf-btn-outline" href="#">Try for Free</a>
+      </div>
+      <div class="vf-trust">
+        <span>Commercial rights</span><span>Instant downloads</span><span>Cancel anytime</span>
+      </div>
+    </div>
+  </section>
+
+  <section id="collections" class="vf-section">
+    <div class="container">
+      <div class="vf-section-header">
+        <h2 class="vf-section-title">Featured Collections</h2>
+        <p class="vf-section-subtitle">Curated 4K footage across premium categories</p>
+      </div>
+      <div id="vf-grid" class="vf-grid"><!-- populated by gallery.js --></div>
+    </div>
+  </section>
+
+  <section id="faq" class="vf-section">
+    <div class="container">
+      <div class="vf-section-header"><h2 class="vf-section-title">Frequently Asked Questions</h2></div>
+      <div class="vf-faq">
+        <details><summary>Can I use clips for client projects?</summary><p>Yes — commercial rights included on all paid plans.</p></details>
+        <details><summary>Is there a free plan?</summary><p>Yes — Trial 10 allows 10 clips/month at no cost.</p></details>
+        <details><summary>What resolution are the clips?</summary><p>All clips are native 4K (3840×2160) resolution.</p></details>
+        <details><summary>How do downloads work?</summary><p>Instant access after subscribing. One-click downloads.</p></details>
+        <details><summary>Can I cancel anytime?</summary><p>Yes. No penalties. Keep access until period ends.</p></details>
+        <details><summary>Do you add new footage regularly?</summary><p>Yes! Daily updates with fresh 4K clips.</p></details>
+      </div>
+    </div>
+  </section>
+
+  <footer class="vf-footer">
+    <div class="container">
+      <p>© 2025 VaultFootage. All rights reserved.</p>
+      <div class="vf-footer-links">
+        <a href="privacy.html">Privacy</a>
+        <a href="terms.html">Terms</a>
+        <a href="mailto:innovatesolutionsnow@gmail.com">Contact</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="scripts/gumroad.js"></script>
+  <script src="scripts/gallery.js"></script>
+  <script src="scripts/main.js"></script>
+  <script src="scripts/cinematic.js"></script>
+</body>
+</html>
