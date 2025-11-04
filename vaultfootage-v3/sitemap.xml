@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+ <url><loc>https://<VERCEL_DOMAIN>/</loc></url>
+ <url><loc>https://<VERCEL_DOMAIN>/pricing.html</loc></url>
+ <url><loc>https://<VERCEL_DOMAIN>/privacy.html</loc></url>
+ <url><loc>https://<VERCEL_DOMAIN>/terms.html</loc></url>
+ <url><loc>https://<VERCEL_DOMAIN>/welcome/trial.html</loc></url>
+ <url><loc>https://<VERCEL_DOMAIN>/welcome/full.html</loc></url>
+ <url><loc>https://<VERCEL_DOMAIN>/welcome/lifetime.html</loc></url>
+</urlset>
