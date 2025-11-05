@@ -52,9 +52,10 @@ a{color:var(--vf-text);text-decoration:none}
 .vf-card-thumb {
   position: relative;
   width: 100%;
-  aspect-ratio: 16/9;
+  aspect-ratio: 4/3;
   background: #0f1014;
   overflow: hidden;
+  min-height: 300px;
 }
 .vf-card-thumb img.vf-thumb,
 .vf-card-thumb img {
@@ -125,9 +126,9 @@ a{color:var(--vf-text);text-decoration:none}
 .vf-card-clickable:hover .vf-card-title {
   color: var(--vf-gold);
 }
-.vf-card-content { padding: 14px 14px 16px; background: rgba(11,11,15,0.8); }
-.vf-card-title { font-size: 16px; font-weight: 700; color: #eaeaea; margin: 0 0 6px; transition: color .2s ease; }
-.vf-card-meta { font-size: 13px; color: #9b978c; }
+.vf-card-content { padding: 20px 18px 22px; background: rgba(11,11,15,0.8); }
+.vf-card-title { font-size: 18px; font-weight: 700; color: #eaeaea; margin: 0 0 8px; transition: color .2s ease; }
+.vf-card-meta { font-size: 14px; color: #9b978c; }
 
 .vf-pricing-grid{display:grid;grid-template-columns:repeat( auto-fit, minmax(230px,1fr) );gap:18px}
 .vf-pricing-card{background:var(--vf-card);border:1px solid #24242a;border-radius:16px;padding:18px}
