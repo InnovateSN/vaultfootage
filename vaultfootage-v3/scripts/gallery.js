@@ -9,31 +9,32 @@
       return Array.isArray(json?.collections) ? json.collections : json;
     } catch (e) {
       console.warn('[VF] videos.json not available, using fallback', e);
+      // Fallback con URL funzionanti - Novembre 2025
       return [
         { id:'supercar', title:'Supercar Collection', count:'15+ clips • 4K',
-          thumb:'https://images.pexels.com/photos/1402787/pexels-photo-1402787.jpeg?auto=compress&cs=tinysrgb&w=1280',
-          preview:'https://videos.pexels.com/video-files/1994429/1994429-uhd_2560_1440_25fps.mp4' },
+          thumb:'https://images.pexels.com/photos/3752169/pexels-photo-3752169.jpeg?auto=compress&cs=tinysrgb&w=1280',
+          preview:'https://videos.pexels.com/video-files/5308443/5308443-uhd_2560_1440_30fps.mp4' },
         { id:'yacht', title:'Yacht Collection', count:'12+ clips • 4K',
-          thumb:'https://images.pexels.com/photos/122244/pexels-photo-122244.jpeg?auto=compress&cs=tinysrgb&w=1280',
-          preview:'https://videos.pexels.com/video-files/854227/854227-uhd_2560_1440_30fps.mp4' },
+          thumb:'https://images.pexels.com/photos/163236/luxury-yacht-boat-speed-water-163236.jpeg?auto=compress&cs=tinysrgb&w=1280',
+          preview:'https://videos.pexels.com/video-files/4624974/4624974-uhd_2560_1440_25fps.mp4' },
         { id:'interiors', title:'Luxury Interiors Collection', count:'18+ clips • 4K',
           thumb:'https://images.pexels.com/photos/1571460/pexels-photo-1571460.jpeg?auto=compress&cs=tinysrgb&w=1280',
-          preview:'https://videos.pexels.com/video-files/3182833/3182833-uhd_2560_1440_25fps.mp4' },
+          preview:'https://videos.pexels.com/video-files/3209537/3209537-uhd_2560_1440_25fps.mp4' },
         { id:'fashion', title:'Fashion & Beauty Collection', count:'20+ clips • 4K',
-          thumb:'https://images.pexels.com/photos/631161/pexels-photo-631161.jpeg?auto=compress&cs=tinysrgb&w=1280',
-          preview:'https://videos.pexels.com/video-files/3047297/3047297-uhd_2560_1440_30fps.mp4' },
+          thumb:'https://images.pexels.com/photos/1926769/pexels-photo-1926769.jpeg?auto=compress&cs=tinysrgb&w=1280',
+          preview:'https://videos.pexels.com/video-files/4623495/4623495-uhd_2560_1440_30fps.mp4' },
         { id:'dining', title:'Fine Dining Collection', count:'14+ clips • 4K',
-          thumb:'https://images.pexels.com/photos/262978/pexels-photo-262978.jpeg?auto=compress&cs=tinysrgb&w=1280',
-          preview:'https://videos.pexels.com/video-files/4067501/4067501-uhd_2560_1440_25fps.mp4' },
+          thumb:'https://images.pexels.com/photos/958545/pexels-photo-958545.jpeg?auto=compress&cs=tinysrgb&w=1280',
+          preview:'https://videos.pexels.com/video-files/3195440/3195440-uhd_2560_1440_25fps.mp4' },
         { id:'city', title:'Urban Lifestyle Collection', count:'22+ clips • 4K',
-          thumb:'https://images.pexels.com/photos/374870/pexels-photo-374870.jpeg?auto=compress&cs=tinysrgb&w=1280',
-          preview:'https://videos.pexels.com/video-files/854381/854381-uhd_2560_1440_30fps.mp4' },
+          thumb:'https://images.pexels.com/photos/378570/pexels-photo-378570.jpeg?auto=compress&cs=tinysrgb&w=1280',
+          preview:'https://videos.pexels.com/video-files/3129784/3129784-uhd_2560_1440_30fps.mp4' },
         { id:'nature', title:'Nature & Landscapes Collection', count:'16+ clips • 4K',
-          thumb:'https://images.pexels.com/photos/531972/pexels-photo-531972.jpeg?auto=compress&cs=tinysrgb&w=1280',
-          preview:'https://videos.pexels.com/video-files/2860861/2860861-uhd_2560_1440_25fps.mp4' },
+          thumb:'https://images.pexels.com/photos/1662770/pexels-photo-1662770.jpeg?auto=compress&cs=tinysrgb&w=1280',
+          preview:'https://videos.pexels.com/video-files/2098989/2098989-uhd_2560_1440_24fps.mp4' },
         { id:'tech', title:'Tech & Innovation Collection', count:'19+ clips • 4K',
-          thumb:'https://images.pexels.com/photos/325185/pexels-photo-325185.jpeg?auto=compress&cs=tinysrgb&w=1280',
-          preview:'https://videos.pexels.com/video-files/2795767/2795767-uhd_2560_1440_25fps.mp4' }
+          thumb:'https://images.pexels.com/photos/373543/pexels-photo-373543.jpeg?auto=compress&cs=tinysrgb&w=1280',
+          preview:'https://videos.pexels.com/video-files/3130284/3130284-uhd_2560_1440_30fps.mp4' }
       ];
     }
   }
