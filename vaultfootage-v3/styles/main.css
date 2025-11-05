@@ -48,22 +48,39 @@ a{color:var(--vf-text);text-decoration:none}
 .vf-section-title{font-size:28px;margin:0 0 6px}
 .vf-section-subtitle{opacity:.8;margin:0 0 20px}
 
-/* === THUMBS ALWAYS VISIBLE (Codex hotfix) === */
-.vf-card-thumb {
+/* === THUMBS ALWAYS VISIBLE (Codex Fix v2 - Higher Specificity) === */
+#vf-collections-grid .vf-card .vf-card-thumb {
   position: relative;
   width: 100%;
-  height: 320px;
+  height: 320px !important;
+  min-height: 320px !important;
+  max-height: 320px !important;
   background: #0f1014;
   overflow: hidden;
-}
-.vf-card-thumb img.vf-thumb,
-.vf-card-thumb img {
   display: block;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  opacity: 1;
-  visibility: visible;
+}
+#vf-collections-grid .vf-card .vf-card-thumb img.vf-thumb,
+#vf-collections-grid .vf-card .vf-card-thumb img {
+  display: block !important;
+  width: 100% !important;
+  height: 100% !important;
+  min-height: 320px !important;
+  object-fit: cover !important;
+  object-position: center !important;
+  opacity: 1 !important;
+  visibility: visible !important;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+/* Remove any max-height constraints */
+#vf-collections-grid .vf-card .vf-card-thumb * {
+  max-height: none !important;
+}
+/* Ensure card container doesn't limit height */
+#vf-collections-grid .vf-card {
+  min-height: auto;
+  height: auto;
 }
 /* Hover video sits above the image, fades in */
 .vf-thumb-video{
@@ -149,8 +166,21 @@ a{color:var(--vf-text);text-decoration:none}
 .vf-404-box{text-align:center}
 
 @media (max-width:1400px){ .vf-grid{grid-template-columns:repeat(auto-fill,minmax(350px,1fr));gap:28px} }
-@media (max-width:768px){ .vf-hero-cinematic{min-height:64vh} .vf-nav a{margin-left:12px} .vf-grid{grid-template-columns:1fr;gap:24px} .vf-card-content{padding:16px 14px} .container{padding:0 20px} .vf-card-thumb{height:280px} }
-@media (max-width:520px){ .vf-grid{gap:20px} .vf-card-title{font-size:17px} .vf-card-thumb{height:240px} }
+@media (max-width:768px){ 
+  .vf-hero-cinematic{min-height:64vh} 
+  .vf-nav a{margin-left:12px} 
+  .vf-grid{grid-template-columns:1fr;gap:24px} 
+  .vf-card-content{padding:16px 14px} 
+  .container{padding:0 20px} 
+  #vf-collections-grid .vf-card .vf-card-thumb{height:280px !important; min-height:280px !important; max-height:280px !important}
+  #vf-collections-grid .vf-card .vf-card-thumb img{min-height:280px !important}
+}
+@media (max-width:520px){ 
+  .vf-grid{gap:20px} 
+  .vf-card-title{font-size:17px} 
+  #vf-collections-grid .vf-card .vf-card-thumb{height:240px !important; min-height:240px !important; max-height:240px !important}
+  #vf-collections-grid .vf-card .vf-card-thumb img{min-height:240px !important}
+}
 
 /* === VF LEGAL / WELCOME PAGES === */
 body.vf-legal .vf-section { padding: 48px 0; }
