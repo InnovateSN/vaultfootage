@@ -6,7 +6,9 @@
     "serve": "npx http-server vaultfootage-v3 -p 8080 -s",
     "smoke": "bash scripts/smoke.sh",
     "smoke:serve": "concurrently -k -s first \"npm:serve\" \"sleep 1 && bash scripts/smoke.sh\"",
-    "media:generate": "node scripts/generate_videos_json.js"
+    "media:generate": "node scripts/generate_videos_json.js",
+    "media:validate": "node scripts/validate_media.js",
+    "media:build": "npm run media:generate && npm run media:validate"
   },
   "devDependencies": {
     "concurrently": "^9.0.0",

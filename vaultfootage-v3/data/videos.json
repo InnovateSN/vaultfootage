@@ -1,74 +1,66 @@
 [
   {
-    "id": "supercar-01",
-    "title": "Supercar Collection",
-    "category": "Supercar",
-    "thumb": "https://images.pexels.com/photos/3752169/pexels-photo-3752169.jpeg?auto=compress&cs=tinysrgb&w=1280",
-    "preview": "https://videos.pexels.com/video-files/5308443/5308443-uhd_2560_1440_30fps.mp4",
-    "count": "15+ clips • 4K",
-    "resolution": "4K"
-  },
-  {
-    "id": "yacht-01",
-    "title": "Yacht Collection",
-    "category": "Yacht",
-    "thumb": "https://images.pexels.com/photos/163236/luxury-yacht-boat-speed-water-163236.jpeg?auto=compress&cs=tinysrgb&w=1280",
-    "preview": "https://videos.pexels.com/video-files/4624974/4624974-uhd_2560_1440_25fps.mp4",
-    "count": "12+ clips • 4K",
-    "resolution": "4K"
-  },
-  {
-    "id": "interiors-01",
-    "title": "Luxury Interiors Collection",
-    "category": "Interiors",
-    "thumb": "https://images.pexels.com/photos/1571460/pexels-photo-1571460.jpeg?auto=compress&cs=tinysrgb&w=1280",
-    "preview": "https://videos.pexels.com/video-files/3209537/3209537-uhd_2560_1440_25fps.mp4",
-    "count": "18+ clips • 4K",
-    "resolution": "4K"
-  },
-  {
-    "id": "fashion-01",
-    "title": "Fashion & Beauty Collection",
-    "category": "Fashion",
-    "thumb": "https://images.pexels.com/photos/1926769/pexels-photo-1926769.jpeg?auto=compress&cs=tinysrgb&w=1280",
-    "preview": "https://videos.pexels.com/video-files/4623495/4623495-uhd_2560_1440_30fps.mp4",
-    "count": "20+ clips • 4K",
+    "id": "city-01",
+    "title": "City 01",
+    "category": "City",
+    "thumb": "thumbs/city-01.jpg",
+    "count": "10+ clips • 4K",
     "resolution": "4K"
   },
   {
     "id": "dining-01",
-    "title": "Fine Dining Collection",
+    "title": "Dining 01",
     "category": "Dining",
-    "thumb": "https://images.pexels.com/photos/958545/pexels-photo-958545.jpeg?auto=compress&cs=tinysrgb&w=1280",
-    "preview": "https://videos.pexels.com/video-files/3195440/3195440-uhd_2560_1440_25fps.mp4",
-    "count": "14+ clips • 4K",
+    "thumb": "thumbs/dining-01.jpg",
+    "count": "10+ clips • 4K",
     "resolution": "4K"
   },
   {
-    "id": "city-01",
-    "title": "Urban Lifestyle Collection",
-    "category": "City",
-    "thumb": "https://images.pexels.com/photos/378570/pexels-photo-378570.jpeg?auto=compress&cs=tinysrgb&w=1280",
-    "preview": "https://videos.pexels.com/video-files/3129784/3129784-uhd_2560_1440_30fps.mp4",
-    "count": "22+ clips • 4K",
+    "id": "fashion-01",
+    "title": "Fashion 01",
+    "category": "Fashion",
+    "thumb": "thumbs/fashion-01.jpg",
+    "count": "10+ clips • 4K",
+    "resolution": "4K"
+  },
+  {
+    "id": "interiors-01",
+    "title": "Interiors 01",
+    "category": "Interiors",
+    "thumb": "thumbs/interiors-01.jpg",
+    "count": "10+ clips • 4K",
     "resolution": "4K"
   },
   {
     "id": "nature-01",
-    "title": "Nature & Landscapes Collection",
+    "title": "Nature 01",
     "category": "Nature",
-    "thumb": "https://images.pexels.com/photos/1662770/pexels-photo-1662770.jpeg?auto=compress&cs=tinysrgb&w=1280",
-    "preview": "https://videos.pexels.com/video-files/2098989/2098989-uhd_2560_1440_24fps.mp4",
-    "count": "16+ clips • 4K",
+    "thumb": "thumbs/nature-01.jpg",
+    "count": "10+ clips • 4K",
+    "resolution": "4K"
+  },
+  {
+    "id": "supercar-01",
+    "title": "Supercar — Sunset Road",
+    "category": "Supercar",
+    "thumb": "thumbs/supercar-01.jpg",
+    "count": "15+ clips • 4K",
     "resolution": "4K"
   },
   {
     "id": "tech-01",
-    "title": "Tech & Innovation Collection",
-    "category": "Technology",
-    "thumb": "https://images.pexels.com/photos/373543/pexels-photo-373543.jpeg?auto=compress&cs=tinysrgb&w=1280",
-    "preview": "https://videos.pexels.com/video-files/3130284/3130284-uhd_2560_1440_30fps.mp4",
-    "count": "19+ clips • 4K",
+    "title": "Tech 01",
+    "category": "Tech",
+    "thumb": "thumbs/tech-01.jpg",
+    "count": "10+ clips • 4K",
+    "resolution": "4K"
+  },
+  {
+    "id": "yacht-01",
+    "title": "Yacht 01",
+    "category": "Yacht",
+    "thumb": "thumbs/yacht-01.jpg",
+    "count": "12+ clips • 4K",
     "resolution": "4K"
   }
 ]
