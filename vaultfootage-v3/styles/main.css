@@ -3,9 +3,21 @@
   --vf-text:#eaeaea; --vf-muted:#9b978c;
 }
 *{box-sizing:border-box}
-html,body{margin:0;background:var(--vf-bg);color:var(--vf-text);font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif}
+html,body{margin:0;background:var(--vf-bg);color:var(--vf-text);font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;overflow-x:hidden}
 a{color:var(--vf-text);text-decoration:none}
 .container{max-width:1100px;margin:0 auto;padding:0 20px}
+
+/* === PARTICLES CANVAS FULLSCREEN BACKGROUND === */
+#vf-particles {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: -1;
+  background: var(--vf-bg);
+  pointer-events: none;
+}
 
 .vf-header{position:sticky;top:0;z-index:50;background:rgba(11,11,15,.7);backdrop-filter:blur(6px);border-bottom:1px solid #14141a}
 .vf-header-inner{display:flex;align-items:center;justify-content:space-between;height:64px}
@@ -14,9 +26,9 @@ a{color:var(--vf-text);text-decoration:none}
 .vf-nav a{margin-left:18px;opacity:.9}
 .vf-nav a.active{color:var(--vf-gold)}
 
-.vf-hero-cinematic{position:relative;min-height:72vh;display:grid;place-items:center;overflow:hidden;border-bottom:1px solid #14141a}
-.vf-hero-video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;filter:brightness(.6) contrast(1.1)}
-.vf-hero-overlay{position:absolute;inset:0;background:radial-gradient(90% 60% at 50% 30%, rgba(233,203,115,.25), transparent 60%)}
+.vf-hero-cinematic{position:relative;min-height:72vh;display:grid;place-items:center;overflow:hidden;border-bottom:1px solid #14141a;background:transparent}
+.vf-hero-video{display:none}
+.vf-hero-overlay{position:absolute;inset:0;background:radial-gradient(90% 60% at 50% 30%, rgba(0,255,255,.08), transparent 60%)}
 .vf-hero-content{position:relative;text-align:center;padding:80px 20px}
 .vf-hero-title{font-size:clamp(32px,6vw,64px);letter-spacing:.3px;margin:0 0 10px}
 .vf-hero-subtitle{opacity:.8;margin:0 0 20px}
@@ -29,7 +41,7 @@ a{color:var(--vf-text);text-decoration:none}
 .vf-btn-ghost{background:transparent;border:1px dashed #2a2a30;color:var(--vf-muted)}
 .vf-btn:hover{transform:translateY(-1px);filter:brightness(1.05)}
 
-.vf-section{padding:64px 0;border-top:1px solid #14141a;border-bottom:1px solid #14141a}
+.vf-section{padding:64px 0;border-top:1px solid #14141a;border-bottom:1px solid #14141a;background:rgba(11,11,15,0.85);position:relative}
 .vf-section-narrow{padding:40px 0}
 .vf-section-title{font-size:28px;margin:0 0 6px}
 .vf-section-subtitle{opacity:.8;margin:0 0 20px}
