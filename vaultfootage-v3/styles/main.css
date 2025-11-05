@@ -2,8 +2,9 @@
   --vf-bg:#0b0b0f; --vf-card:#1a1a1e; --vf-gold:#e6c567; --vf-gold2:#d9b652;
   --vf-text:#eaeaea; --vf-muted:#9b978c;
 }
-*{box-sizing:border-box}
-html,body{margin:0;background:transparent;color:var(--vf-text);font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;overflow-x:hidden}
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{margin:0;padding:0;background:var(--vf-bg);color:var(--vf-text);font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;overflow-x:hidden;min-height:100vh}
+body{background:var(--vf-bg)}
 a{color:var(--vf-text);text-decoration:none}
 .container{max-width:1100px;margin:0 auto;padding:0 20px}
 
