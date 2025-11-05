@@ -1,0 +1,22 @@
+{
+  "byId": {
+    "supercar-01": {
+      "title": "Supercar — Sunset Road",
+      "category": "Supercar",
+      "count": "15+ clips • 4K",
+      "resolution": "4K"
+    }
+  },
+  "byPrefix": {
+    "supercar": {
+      "category": "Supercar",
+      "count": "15+ clips • 4K",
+      "resolution": "4K"
+    },
+    "yacht": {
+      "category": "Yacht",
+      "count": "12+ clips • 4K",
+      "resolution": "4K"
+    }
+  }
+}
