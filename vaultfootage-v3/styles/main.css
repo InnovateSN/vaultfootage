@@ -6,7 +6,7 @@
 html,body{margin:0;padding:0;background:var(--vf-bg);color:var(--vf-text);font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;overflow-x:hidden;min-height:100vh}
 body{background:var(--vf-bg)}
 a{color:var(--vf-text);text-decoration:none}
-.container{max-width:1100px;margin:0 auto;padding:0 20px}
+.container{max-width:1400px;margin:0 auto;padding:0 32px}
 
 /* === PARTICLES CANVAS FULLSCREEN BACKGROUND === */
 #vf-particles {
@@ -95,10 +95,12 @@ a{color:var(--vf-text);text-decoration:none}
 /* Ensure big 16:9 cards grid */
 #vf-collections-grid.vf-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
-  gap: 24px;
+  grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+  gap: 32px;
+  max-width: 1400px;
+  margin: 0 auto;
 }
-.vf-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(380px,1fr));gap:28px}
+.vf-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(400px,1fr));gap:32px}
 .vf-card {
   display: block;
   text-decoration: none;
@@ -146,9 +148,9 @@ a{color:var(--vf-text);text-decoration:none}
 .vf-404{display:grid;place-items:center;min-height:100vh}
 .vf-404-box{text-align:center}
 
-@media (max-width:1200px){ .vf-grid{grid-template-columns:repeat(auto-fill,minmax(320px,1fr));gap:24px} }
-@media (max-width:768px){ .vf-hero-cinematic{min-height:64vh} .vf-nav a{margin-left:12px} .vf-grid{grid-template-columns:1fr;gap:20px} .vf-card-content{padding:16px 14px} }
-@media (max-width:520px){ .vf-grid{gap:16px} .vf-card-title{font-size:17px} }
+@media (max-width:1400px){ .vf-grid{grid-template-columns:repeat(auto-fill,minmax(350px,1fr));gap:28px} }
+@media (max-width:768px){ .vf-hero-cinematic{min-height:64vh} .vf-nav a{margin-left:12px} .vf-grid{grid-template-columns:1fr;gap:24px} .vf-card-content{padding:16px 14px} .container{padding:0 20px} }
+@media (max-width:520px){ .vf-grid{gap:20px} .vf-card-title{font-size:17px} }
 
 /* === VF LEGAL / WELCOME PAGES === */
 body.vf-legal .vf-section { padding: 48px 0; }
