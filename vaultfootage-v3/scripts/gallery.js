@@ -24,7 +24,10 @@
     return `
       <div class="vf-card vf-card-3d vf-card-glow" data-id="${item.id}">
         <div class="vf-card-thumb">
-          <img class="vf-thumb" src="${item.thumb}" alt="${item.title}" loading="lazy" />
+          <img class="vf-thumb" src="${item.thumb}" alt="${item.title}"
+               loading="lazy" decoding="async"
+               width="1280" height="720"
+               sizes="(max-width: 520px) 100vw, (max-width: 900px) 50vw, 33vw" />
           <span class="vf-card-category">${item.title}</span>
         </div>
         <div class="vf-card-content">
@@ -48,13 +51,15 @@
       video.autoplay = true;
       video.loop = true;
       video.preload = 'metadata';
-      video.style.position = 'absolute';
-      video.style.inset = '0';
-      video.style.width = '100%';
-      video.style.height = '100%';
-      video.style.objectFit = 'cover';
-      video.style.opacity = '0';
-      video.style.transition = 'opacity .25s ease';
+      Object.assign(video.style, {
+        position: 'absolute',
+        inset: '0',
+        width: '100%',
+        height: '100%',
+        objectFit: 'cover',
+        opacity: '0',
+        transition: 'opacity .18s ease'
+      });
       thumbWrap.style.position = 'relative';
       thumbWrap.appendChild(video);
       requestAnimationFrame(() => (video.style.opacity = '1'));
