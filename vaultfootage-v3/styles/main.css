@@ -52,10 +52,9 @@ a{color:var(--vf-text);text-decoration:none}
 .vf-card-thumb {
   position: relative;
   width: 100%;
-  aspect-ratio: 4/3;
+  height: 320px;
   background: #0f1014;
   overflow: hidden;
-  min-height: 300px;
 }
 .vf-card-thumb img.vf-thumb,
 .vf-card-thumb img {
@@ -150,8 +149,8 @@ a{color:var(--vf-text);text-decoration:none}
 .vf-404-box{text-align:center}
 
 @media (max-width:1400px){ .vf-grid{grid-template-columns:repeat(auto-fill,minmax(350px,1fr));gap:28px} }
-@media (max-width:768px){ .vf-hero-cinematic{min-height:64vh} .vf-nav a{margin-left:12px} .vf-grid{grid-template-columns:1fr;gap:24px} .vf-card-content{padding:16px 14px} .container{padding:0 20px} }
-@media (max-width:520px){ .vf-grid{gap:20px} .vf-card-title{font-size:17px} }
+@media (max-width:768px){ .vf-hero-cinematic{min-height:64vh} .vf-nav a{margin-left:12px} .vf-grid{grid-template-columns:1fr;gap:24px} .vf-card-content{padding:16px 14px} .container{padding:0 20px} .vf-card-thumb{height:280px} }
+@media (max-width:520px){ .vf-grid{gap:20px} .vf-card-title{font-size:17px} .vf-card-thumb{height:240px} }
 
 /* === VF LEGAL / WELCOME PAGES === */
 body.vf-legal .vf-section { padding: 48px 0; }
