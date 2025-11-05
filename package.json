@@ -1,0 +1,16 @@
+{
+  "name": "vaultfootage-tooling",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "serve": "npx http-server vaultfootage-v3 -p 8080 -s",
+    "smoke": "bash scripts/smoke.sh",
+    "smoke:serve": "concurrently -k -s first \"npm:serve\" \"sleep 1 && bash scripts/smoke.sh\"",
+    "media:generate": "node scripts/generate_videos_json.js"
+  },
+  "devDependencies": {
+    "concurrently": "^9.0.0",
+    "http-server": "^14.1.1",
+    "jq-web": "^0.5.1"
+  }
+}

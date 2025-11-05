@@ -1,0 +1,14 @@
+# VaultFootage Code Owners
+# These owners will be requested for review when someone opens a PR
+
+# Default owner for everything
+* @InnovateSN
+
+# Critical paths
+/vaultfootage-v3/scripts/ @InnovateSN
+/vaultfootage-v3/data/ @InnovateSN
+/.github/workflows/ @InnovateSN
+
+# Deployment configuration
+/vaultfootage-v3/vercel.json @InnovateSN
+/package.json @InnovateSN
