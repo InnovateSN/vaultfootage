@@ -1,7 +1,7 @@
 /**
- * VaultFootage - Minimal Elegant Background
- * Subtle animated gradient mesh with smooth movements
- * Professional and refined aesthetic
+ * VaultFootage - Elegant Animated Gradient Background
+ * Subtle mesh gradient with smooth color transitions
+ * Professional and modern aesthetic
  */
 
 (() => {
@@ -9,151 +9,102 @@
   if (!canvas) return;
 
   const ctx = canvas.getContext('2d');
-  let gradientPoints = [];
+  let gradientOrbs = [];
   let animationId;
-  let time = 0;
 
-  // Configuration - Minimal and elegant
+  // Configuration
   const config = {
-    pointCount: 4, // Just a few points for smooth gradients
-    baseColor: { r: 0, g: 180, b: 180 }, // Subtle cyan
-    speed: 0.0003, // Very slow movement
-    amplitude: 100, // Gentle movement range
-    gridOpacity: 0.03, // Very subtle grid
-    gridSpacing: 60,
-    showGrid: true,
-    showGradients: true
+    orbCount: 3,
+    colors: [
+      { r: 0, g: 180, b: 180, name: 'cyan' },      // Cyan
+      { r: 100, g: 100, b: 200, name: 'blue' },    // Soft blue
+      { r: 0, g: 150, b: 150, name: 'teal' }       // Teal
+    ],
+    speed: 0.2,
+    baseRadius: 400,
+    opacity: 0.25
   };
 
-  // Gradient point class
-  class GradientPoint {
+  class GradientOrb {
     constructor(index) {
-      this.index = index;
-      this.baseX = (canvas.width / (config.pointCount + 1)) * (index + 1);
-      this.baseY = (canvas.height / (config.pointCount + 1)) * (index + 1);
-      this.offsetX = 0;
-      this.offsetY = 0;
-      this.angleX = Math.random() * Math.PI * 2;
-      this.angleY = Math.random() * Math.PI * 2;
-      this.speedX = 0.3 + Math.random() * 0.3;
-      this.speedY = 0.3 + Math.random() * 0.3;
+      this.color = config.colors[index % config.colors.length];
+      this.x = Math.random() * canvas.width;
+      this.y = Math.random() * canvas.height;
+      this.vx = (Math.random() - 0.5) * config.speed;
+      this.vy = (Math.random() - 0.5) * config.speed;
+      this.radius = config.baseRadius + Math.random() * 200;
     }
 
     update() {
-      this.angleX += config.speed * this.speedX;
-      this.angleY += config.speed * this.speedY;
-      
-      this.offsetX = Math.sin(this.angleX) * config.amplitude;
-      this.offsetY = Math.cos(this.angleY) * config.amplitude;
-      
-      this.x = this.baseX + this.offsetX;
-      this.y = this.baseY + this.offsetY;
-    }
-  }
+      this.x += this.vx;
+      this.y += this.vy;
 
-  // Initialize canvas
-  function resizeCanvas() {
-    canvas.width = window.innerWidth;
-    canvas.height = window.innerHeight;
-    initPoints();
-  }
+      // Bounce off edges
+      if (this.x < -this.radius || this.x > canvas.width + this.radius) {
+        this.vx *= -1;
+      }
+      if (this.y < -this.radius || this.y > canvas.height + this.radius) {
+        this.vy *= -1;
+      }
 
-  // Create gradient points
-  function initPoints() {
-    gradientPoints = [];
-    for (let i = 0; i < config.pointCount; i++) {
-      gradientPoints.push(new GradientPoint(i));
-    }
-  }
-
-  // Draw subtle grid
-  function drawGrid() {
-    if (!config.showGrid) return;
-
-    ctx.strokeStyle = `rgba(${config.baseColor.r}, ${config.baseColor.g}, ${config.baseColor.b}, ${config.gridOpacity})`;
-    ctx.lineWidth = 0.5;
-
-    // Vertical lines
-    for (let x = 0; x < canvas.width; x += config.gridSpacing) {
-      ctx.beginPath();
-      ctx.moveTo(x, 0);
-      ctx.lineTo(x, canvas.height);
-      ctx.stroke();
+      // Keep in bounds
+      this.x = Math.max(-this.radius / 2, Math.min(canvas.width + this.radius / 2, this.x));
+      this.y = Math.max(-this.radius / 2, Math.min(canvas.height + this.radius / 2, this.y));
     }
 
-    // Horizontal lines
-    for (let y = 0; y < canvas.height; y += config.gridSpacing) {
-      ctx.beginPath();
-      ctx.moveTo(0, y);
-      ctx.lineTo(canvas.width, y);
-      ctx.stroke();
-    }
-  }
-
-  // Draw animated gradients
-  function drawGradients() {
-    if (!config.showGradients || gradientPoints.length === 0) return;
-
-    gradientPoints.forEach((point, i) => {
-      // Create radial gradient for each point
+    draw() {
       const gradient = ctx.createRadialGradient(
-        point.x, point.y, 0,
-        point.x, point.y, 300
+        this.x, this.y, 0,
+        this.x, this.y, this.radius
       );
 
-      const alpha = 0.15 + Math.sin(time * 0.001 + i) * 0.05;
-      
-      gradient.addColorStop(0, `rgba(${config.baseColor.r}, ${config.baseColor.g}, ${config.baseColor.b}, ${alpha})`);
-      gradient.addColorStop(0.5, `rgba(${config.baseColor.r}, ${config.baseColor.g}, ${config.baseColor.b}, ${alpha * 0.3})`);
+      gradient.addColorStop(0, `rgba(${this.color.r}, ${this.color.g}, ${this.color.b}, ${config.opacity})`);
+      gradient.addColorStop(0.5, `rgba(${this.color.r}, ${this.color.g}, ${this.color.b}, ${config.opacity * 0.5})`);
       gradient.addColorStop(1, 'rgba(0, 0, 0, 0)');
 
       ctx.fillStyle = gradient;
       ctx.fillRect(0, 0, canvas.width, canvas.height);
-    });
-  }
-
-  // Draw subtle connecting lines between points
-  function drawConnections() {
-    ctx.strokeStyle = `rgba(${config.baseColor.r}, ${config.baseColor.g}, ${config.baseColor.b}, 0.05)`;
-    ctx.lineWidth = 1;
-
-    for (let i = 0; i < gradientPoints.length; i++) {
-      for (let j = i + 1; j < gradientPoints.length; j++) {
-        ctx.beginPath();
-        ctx.moveTo(gradientPoints[i].x, gradientPoints[i].y);
-        ctx.lineTo(gradientPoints[j].x, gradientPoints[j].y);
-        ctx.stroke();
-      }
     }
   }
 
-  // Animation loop
-  function animate() {
-    time++;
+  function resizeCanvas() {
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
+  }
 
-    // Clear canvas - no trail effect for clean look
+  function init() {
+    gradientOrbs = [];
+    for (let i = 0; i < config.orbCount; i++) {
+      gradientOrbs.push(new GradientOrb(i));
+    }
+  }
+
+  function animate() {
+    // Clear with dark background
     ctx.fillStyle = '#0b0b0f';
     ctx.fillRect(0, 0, canvas.width, canvas.height);
 
-    // Draw elements in order
-    drawGrid();
-    drawGradients();
-    drawConnections();
+    // Draw and update orbs with blend mode
+    ctx.globalCompositeOperation = 'screen';
+    
+    gradientOrbs.forEach(orb => {
+      orb.update();
+      orb.draw();
+    });
 
-    // Update gradient points
-    gradientPoints.forEach(point => point.update());
+    ctx.globalCompositeOperation = 'source-over';
 
     animationId = requestAnimationFrame(animate);
   }
 
-  // Window resize
   window.addEventListener('resize', () => {
     resizeCanvas();
+    init();
   });
 
-  // Initialize
   resizeCanvas();
+  init();
   animate();
 
-  console.log('✅ VaultFootage minimal background initialized');
+  console.log('✅ VaultFootage gradient background initialized');
 })();
