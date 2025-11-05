@@ -85,11 +85,12 @@
       a.setAttribute('target', '_blank');
       a.setAttribute('rel', 'noopener');
 
-      const hasVariant = a.classList.contains('vf-btn-primary')
-        || a.classList.contains('vf-btn-outline')
-        || a.classList.contains('vf-btn-ghost');
+      const classes = Array.from(a.classList);
+      const hasVariant = classes.some(cls => /^(vf-btn-(primary|outline|ghost))$/i.test(cls));
 
-      a.classList.add('vf-btn');
+      if (!classes.includes('vf-btn')) {
+        a.classList.add('vf-btn');
+      }
       if (!hasVariant) {
         a.classList.add('vf-btn-primary');
       }
