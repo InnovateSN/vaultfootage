@@ -40,8 +40,14 @@
   }
 
   function makeCard(item) {
-    const card = document.createElement('div');
-    card.className = 'vf-card vf-card-3d vf-card-glow';
+    // Make card a clickable link
+    const card = document.createElement('a');
+    card.href = '#'; // Will be handled by gumroad.js
+    card.className = 'vf-card vf-card-3d vf-card-glow vf-card-clickable';
+    card.setAttribute('data-plan', 'monthly');
+    card.setAttribute('data-utm-source', 'collections');
+    card.setAttribute('data-utm-campaign', `collection-${item.id || 'view'}`);
+    card.style.cursor = 'pointer';
 
     const thumb = document.createElement('div');
     thumb.className = 'vf-card-thumb';
@@ -103,6 +109,11 @@
     grid.innerHTML = '';
     grid.appendChild(frag);
     console.log('✅ Collections grid rendered:', list.length);
+    
+    // Initialize Gumroad links on collection cards
+    if (window.__vfGumroad?.normalizeButtons) {
+      window.__vfGumroad.normalizeButtons();
+    }
   }
 
   if (document.readyState === 'loading') {
