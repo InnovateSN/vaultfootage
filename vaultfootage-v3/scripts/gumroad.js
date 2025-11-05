@@ -9,19 +9,20 @@
   };
 
   const PLAN_RETURN = {
-    trial: '/welcome/trial.html',
-    trial10: '/welcome/trial.html',
-    monthly: '/welcome/full.html',
-    yearly: '/welcome/full.html',
-    lifetime: '/welcome/lifetime.html'
+    trial: 'welcome/trial.html',
+    trial10: 'welcome/trial.html',
+    monthly: 'welcome/full.html',
+    yearly: 'welcome/full.html',
+    lifetime: 'welcome/lifetime.html'
   };
 
   function buildReturn(path) {
     try {
-      return new URL(path, window.location.origin).toString();
+      return new URL(path, window.location.href).toString();
     } catch {
-      // fallback ultra-sicuro
-      return `${window.location.origin}${path.startsWith('/') ? '' : '/'}${path}`;
+      const baseDir = window.location.pathname.replace(/[^/]*$/, '/');
+      const normalized = path.startsWith('/') ? path : `${baseDir}${path}`;
+      return `${window.location.origin}${normalized}`;
     }
   }
 
@@ -38,7 +39,7 @@
     const base = new URL(`https://innovatesol.gumroad.com/l/${slug}`);
 
     // return_url dinamico
-    const returnPath = PLAN_RETURN[plan] || '/welcome/success.html';
+    const returnPath = PLAN_RETURN[plan] || 'welcome/success.html';
     const returnURL = new URL(buildReturn(returnPath));
     returnURL.searchParams.set('via', 'gumroad');
 
@@ -84,8 +85,14 @@
       a.setAttribute('target', '_blank');
       a.setAttribute('rel', 'noopener');
 
-      // classi VF standardizzate (se vuoi)
-      a.classList.add('vf-btn', 'vf-btn-primary');
+      const hasVariant = a.classList.contains('vf-btn-primary')
+        || a.classList.contains('vf-btn-outline')
+        || a.classList.contains('vf-btn-ghost');
+
+      a.classList.add('vf-btn');
+      if (!hasVariant) {
+        a.classList.add('vf-btn-primary');
+      }
     });
   }
 
