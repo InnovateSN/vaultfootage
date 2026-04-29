@@ -1,0 +1,1 @@
+const opportunities=[{title:'UK Innovation Grant',value:85000,deadlineDays:9,sector:'Innovation',score:92},{title:'SME Digital Adoption Fund',value:45000,deadlineDays:15,sector:'Digital',score:78},{title:'Creative Industries Growth Grant',value:30000,deadlineDays:21,sector:'Creative',score:74}];export default opportunities;
