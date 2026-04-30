@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 300">
+  <defs>
+    <radialGradient id="earGrad" cx="35%" cy="25%" r="70%">
+      <stop offset="0" stop-color="#f2c6ff"/>
+      <stop offset="0.45" stop-color="#a45dcc"/>
+      <stop offset="1" stop-color="#6a2e91"/>
+    </radialGradient>
+    <filter id="earShadow" x="-30%" y="-30%" width="160%" height="160%">
+      <feDropShadow dx="0" dy="8" stdDeviation="10" flood-color="#000" flood-opacity="0.35"/>
+    </filter>
+  </defs>
+  <g filter="url(#earShadow)">
+    <circle cx="240" cy="140" r="120" fill="url(#earGrad)"/>
+    <circle cx="760" cy="140" r="120" fill="url(#earGrad)"/>
+    <rect x="300" y="90" width="400" height="100" rx="50" fill="url(#earGrad)"/>
+  </g>
+</svg>
