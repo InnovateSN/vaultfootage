@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 430">
+  <defs>
+    <radialGradient id="ear" cx="34%" cy="24%" r="78%">
+      <stop offset="0" stop-color="#f2c6ff"/>
+      <stop offset=".48" stop-color="#a45dcc"/>
+      <stop offset="1" stop-color="#48206b"/>
+    </radialGradient>
+    <filter id="s" x="-20%" y="-20%" width="140%" height="140%"><feDropShadow dx="0" dy="12" stdDeviation="12" flood-color="#000" flood-opacity=".35"/></filter>
+  </defs>
+  <path filter="url(#s)" d="M250 30C370 30 465 125 465 245C465 330 410 395 320 402H92C50 402 35 370 54 335C75 296 83 244 80 205C71 102 148 30 250 30Z" fill="url(#ear)"/>
+  <path d="M145 95C200 52 285 50 345 82" fill="none" stroke="#f5d0ff" stroke-width="22" stroke-linecap="round" opacity=".45"/>
+</svg>
