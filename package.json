@@ -1,5 +1,5 @@
 {
-  "name": "signalbid",
+  "name": "tamasocial",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -9,18 +9,16 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "@stripe/stripe-js": "^4.10.0",
-    "next": "15.0.4",
-    "react": "18.3.1",
-    "react-dom": "18.3.1",
-    "stripe": "^17.4.0"
+    "next": "^15.3.5",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
   },
   "devDependencies": {
     "@types/node": "^22.10.2",
     "@types/react": "^18.3.12",
     "@types/react-dom": "^18.3.1",
     "eslint": "^9.16.0",
-    "eslint-config-next": "15.0.4",
+    "eslint-config-next": "^15.3.5",
     "typescript": "^5.7.2"
   }
 }
