@@ -1,59 +1,35 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080" width="1920" height="1080" preserveAspectRatio="xMidYMid slice">
   <defs>
-    <radialGradient id="bg" cx="50%" cy="48%" r="78%">
-      <stop offset="0%" stop-color="#1b1d22"/>
-      <stop offset="58%" stop-color="#0b0d12"/>
-      <stop offset="100%" stop-color="#030407"/>
+    <radialGradient id="egg" cx="42%" cy="31%" r="72%">
+      <stop offset="0%" stop-color="#fff2ca"/>
+      <stop offset="30%" stop-color="#edd8a8"/>
+      <stop offset="62%" stop-color="#d0b47c"/>
+      <stop offset="100%" stop-color="#92744c"/>
     </radialGradient>
-    <radialGradient id="egg" cx="36%" cy="25%" r="74%">
-      <stop offset="0%" stop-color="#fff6d8"/>
-      <stop offset="18%" stop-color="#f7e8bd"/>
-      <stop offset="48%" stop-color="#dec796"/>
-      <stop offset="75%" stop-color="#c4a875"/>
-      <stop offset="100%" stop-color="#8f744e"/>
-    </radialGradient>
-    <radialGradient id="faceGlow" cx="43%" cy="30%" r="58%">
-      <stop offset="0%" stop-color="#fff7dc" stop-opacity="0.78"/>
-      <stop offset="38%" stop-color="#fff0c6" stop-opacity="0.32"/>
-      <stop offset="100%" stop-color="#fff0c6" stop-opacity="0"/>
-    </radialGradient>
-    <radialGradient id="edgeShade" cx="70%" cy="58%" r="58%">
-      <stop offset="0%" stop-color="#000000" stop-opacity="0"/>
-      <stop offset="70%" stop-color="#000000" stop-opacity="0.06"/>
-      <stop offset="100%" stop-color="#000000" stop-opacity="0.28"/>
-    </radialGradient>
-    <linearGradient id="verticalSheen" x1="0" x2="1" y1="0" y2="0">
-      <stop offset="0%" stop-color="#ffffff" stop-opacity="0"/>
-      <stop offset="12%" stop-color="#ffffff" stop-opacity="0.16"/>
-      <stop offset="22%" stop-color="#ffffff" stop-opacity="0.06"/>
-      <stop offset="52%" stop-color="#ffffff" stop-opacity="0"/>
-      <stop offset="82%" stop-color="#ffffff" stop-opacity="0.13"/>
+    <radialGradient id="softLight" cx="40%" cy="28%" r="62%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.32"/>
+      <stop offset="44%" stop-color="#ffffff" stop-opacity="0.10"/>
       <stop offset="100%" stop-color="#ffffff" stop-opacity="0"/>
-    </linearGradient>
-    <filter id="softBlur" x="-20%" y="-20%" width="140%" height="140%">
-      <feGaussianBlur stdDeviation="18"/>
+    </radialGradient>
+    <radialGradient id="edgeShade" cx="72%" cy="62%" r="65%">
+      <stop offset="0%" stop-color="#000000" stop-opacity="0"/>
+      <stop offset="72%" stop-color="#000000" stop-opacity="0.05"/>
+      <stop offset="100%" stop-color="#000000" stop-opacity="0.24"/>
+    </radialGradient>
+    <filter id="drop" x="-30%" y="-30%" width="160%" height="160%">
+      <feDropShadow dx="0" dy="38" stdDeviation="32" flood-color="#000" flood-opacity="0.45"/>
     </filter>
-    <filter id="eggShadow" x="-35%" y="-35%" width="170%" height="170%">
-      <feDropShadow dx="0" dy="44" stdDeviation="32" flood-color="#000000" flood-opacity="0.55"/>
-    </filter>
-    <filter id="plasticNoise" x="0" y="0" width="100%" height="100%">
-      <feTurbulence type="fractalNoise" baseFrequency="0.012" numOctaves="3" seed="14" result="noise"/>
-      <feColorMatrix in="noise" type="matrix" values="0 0 0 0 1  0 0 0 0 .86  0 0 0 0 .55  0 0 0 .09 0" result="coloredNoise"/>
-      <feBlend in="SourceGraphic" in2="coloredNoise" mode="soft-light"/>
+    <filter id="grain" x="0" y="0" width="100%" height="100%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.018" numOctaves="2" seed="21" result="n"/>
+      <feColorMatrix in="n" type="matrix" values="0 0 0 0 .95 0 0 0 0 .78 0 0 0 0 .45 0 0 0 .055 0" result="cn"/>
+      <feBlend in="SourceGraphic" in2="cn" mode="soft-light"/>
     </filter>
   </defs>
-
-  <rect width="1920" height="1080" fill="url(#bg)"/>
-  <ellipse cx="960" cy="940" rx="380" ry="54" fill="#000" opacity="0.42" filter="url(#softBlur)"/>
-
-  <g filter="url(#eggShadow)">
-    <path d="M955 105 C1116 105 1236 205 1297 356 C1357 505 1342 701 1235 825 C1132 944 948 978 797 904 C645 830 568 677 591 504 C613 339 704 187 835 130 C873 113 914 105 955 105 Z" fill="url(#egg)" filter="url(#plasticNoise)"/>
-    <path d="M955 105 C1116 105 1236 205 1297 356 C1357 505 1342 701 1235 825 C1132 944 948 978 797 904 C645 830 568 677 591 504 C613 339 704 187 835 130 C873 113 914 105 955 105 Z" fill="url(#faceGlow)"/>
-    <path d="M955 105 C1116 105 1236 205 1297 356 C1357 505 1342 701 1235 825 C1132 944 948 978 797 904 C645 830 568 677 591 504 C613 339 704 187 835 130 C873 113 914 105 955 105 Z" fill="url(#edgeShade)"/>
-    <path d="M731 205 C645 318 610 445 625 568" fill="none" stroke="#ffffff" stroke-width="36" stroke-linecap="round" opacity="0.22"/>
-    <path d="M795 156 C927 94 1110 126 1215 286" fill="none" stroke="#ffffff" stroke-width="22" stroke-linecap="round" opacity="0.16"/>
-    <path d="M1192 250 C1270 388 1274 550 1225 694" fill="none" stroke="#ffffff" stroke-width="24" stroke-linecap="round" opacity="0.18"/>
-    <path d="M653 230 C742 102 1037 60 1215 235 C1383 400 1371 766 1154 909" fill="none" stroke="#ffffff" stroke-width="6" opacity="0.17"/>
-    <path d="M955 105 C1116 105 1236 205 1297 356 C1357 505 1342 701 1235 825 C1132 944 948 978 797 904 C645 830 568 677 591 504 C613 339 704 187 835 130 C873 113 914 105 955 105 Z" fill="url(#verticalSheen)" opacity="0.58"/>
+  <rect width="1920" height="1080" fill="#07090f"/>
+  <ellipse cx="960" cy="930" rx="360" ry="44" fill="#000" opacity="0.30"/>
+  <g filter="url(#drop)">
+    <path d="M954 112 C1114 112 1235 213 1294 360 C1355 513 1334 704 1227 824 C1121 944 942 973 793 899 C647 827 572 676 592 510 C612 343 704 194 836 133 C872 119 913 112 954 112 Z" fill="url(#egg)" filter="url(#grain)"/>
+    <path d="M954 112 C1114 112 1235 213 1294 360 C1355 513 1334 704 1227 824 C1121 944 942 973 793 899 C647 827 572 676 592 510 C612 343 704 194 836 133 C872 119 913 112 954 112 Z" fill="url(#softLight)"/>
+    <path d="M954 112 C1114 112 1235 213 1294 360 C1355 513 1334 704 1227 824 C1121 944 942 973 793 899 C647 827 572 676 592 510 C612 343 704 194 836 133 C872 119 913 112 954 112 Z" fill="url(#edgeShade)"/>
   </g>
 </svg>
