@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 650">
+  <defs>
+    <radialGradient id="bezel" cx="35%" cy="22%" r="88%">
+      <stop offset="0" stop-color="#d9a0f5"/>
+      <stop offset=".45" stop-color="#8a47b8"/>
+      <stop offset="1" stop-color="#2c153e"/>
+    </radialGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%"><feDropShadow dx="0" dy="22" stdDeviation="18" flood-color="#000" flood-opacity=".42"/></filter>
+  </defs>
+  <path filter="url(#shadow)" fill="url(#bezel)" fill-rule="evenodd" d="M115 40H1085C1137 40 1175 78 1175 130V520C1175 572 1137 610 1085 610H115C63 610 25 572 25 520V130C25 78 63 40 115 40ZM155 105C118 105 91 132 91 169V481C91 518 118 545 155 545H1045C1082 545 1109 518 1109 481V169C1109 132 1082 105 1045 105H155Z"/>
+  <path fill="none" stroke="#f3c9ff" stroke-width="10" opacity=".32" d="M125 55H1075C1120 55 1160 95 1160 140"/>
+  <path fill="none" stroke="#1b0828" stroke-width="12" opacity=".42" d="M100 588H1100"/>
+</svg>
