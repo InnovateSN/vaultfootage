@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1000">
+  <defs>
+    <radialGradient id="shell" cx="38%" cy="28%" r="78%">
+      <stop offset="0" stop-color="#fff4d8"/>
+      <stop offset="0.36" stop-color="#ead4a7"/>
+      <stop offset="0.72" stop-color="#ccb07c"/>
+      <stop offset="1" stop-color="#987951"/>
+    </radialGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%"><feDropShadow dx="0" dy="28" stdDeviation="22" flood-color="#000" flood-opacity=".45"/></filter>
+    <filter id="grain"><feTurbulence type="fractalNoise" baseFrequency=".016" numOctaves="2" seed="7" result="n"/><feColorMatrix in="n" type="matrix" values="0 0 0 0 1 0 0 0 0 .86 0 0 0 0 .55 0 0 0 .045 0" result="cn"/><feBlend in="SourceGraphic" in2="cn" mode="soft-light"/></filter>
+  </defs>
+  <path filter="url(#shadow)" d="M800 80C1110 80 1370 270 1435 525C1502 790 1260 930 800 930C340 930 98 790 165 525C230 270 490 80 800 80Z" fill="url(#shell)"/>
+  <path d="M800 80C1110 80 1370 270 1435 525C1502 790 1260 930 800 930C340 930 98 790 165 525C230 270 490 80 800 80Z" fill="url(#shell)" filter="url(#grain)" opacity=".85"/>
+  <path d="M280 230C430 85 800 70 1110 135" fill="none" stroke="#fff8df" stroke-width="30" opacity=".22" stroke-linecap="round"/>
+</svg>
