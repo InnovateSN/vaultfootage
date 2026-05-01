@@ -25,7 +25,7 @@ export default function Home() {
         }}
       >
         <img
-          src="/assets/tamasocial-separated/01-device-shell-main.png?v=1"
+          src="/assets/tamasocial-separated/01-device-shell-main.svg?v=2"
           alt=""
           style={{
             width: "100%",
