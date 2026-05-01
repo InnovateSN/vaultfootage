@@ -71,14 +71,14 @@ export default function Home() {
         />
 
         <path
-          d="M330 170 C410 75 560 138 615 78 C650 40 950 40 985 78 C1040 138 1190 75 1270 170 C1332 245 1325 690 1265 760 C1175 865 425 865 335 760 C275 690 268 245 330 170 Z"
+          d="M225 125 C320 20 500 92 570 42 C620 6 980 6 1030 42 C1100 92 1280 20 1375 125 C1450 208 1440 705 1368 792 C1260 920 340 920 232 792 C160 705 150 208 225 125 Z"
           fill="url(#purple)"
           filter="url(#innerShadow)"
         />
 
-        <rect x="390" y="225" width="820" height="440" rx="74" fill="#040505" />
-        <rect x="420" y="255" width="760" height="380" rx="58" fill="#101313" />
-        <ellipse cx="635" cy="300" rx="255" ry="52" fill="#ffffff" opacity="0.075" />
+        <rect x="260" y="180" width="1080" height="555" rx="88" fill="#040505" />
+        <rect x="294" y="214" width="1012" height="487" rx="68" fill="#101313" />
+        <ellipse cx="570" cy="260" rx="315" ry="60" fill="#ffffff" opacity="0.075" />
 
         <path
           d="M1265 165 C1370 322 1374 628 1245 782"
@@ -95,12 +95,12 @@ export default function Home() {
           opacity="0.18"
         />
 
-        <circle cx="535" cy="805" r="68" fill="url(#button)" filter="url(#buttonShadow)" />
-        <circle cx="800" cy="835" r="72" fill="url(#button)" filter="url(#buttonShadow)" />
-        <circle cx="1065" cy="805" r="68" fill="url(#button)" filter="url(#buttonShadow)" />
-        <ellipse cx="512" cy="779" rx="30" ry="14" fill="#ffffff" opacity="0.25" />
-        <ellipse cx="777" cy="807" rx="31" ry="15" fill="#ffffff" opacity="0.25" />
-        <ellipse cx="1042" cy="779" rx="30" ry="14" fill="#ffffff" opacity="0.25" />
+        <circle cx="535" cy="818" r="61" fill="url(#button)" filter="url(#buttonShadow)" />
+        <circle cx="800" cy="842" r="64" fill="url(#button)" filter="url(#buttonShadow)" />
+        <circle cx="1065" cy="818" r="61" fill="url(#button)" filter="url(#buttonShadow)" />
+        <ellipse cx="512" cy="795" rx="27" ry="13" fill="#ffffff" opacity="0.25" />
+        <ellipse cx="777" cy="818" rx="28" ry="14" fill="#ffffff" opacity="0.25" />
+        <ellipse cx="1042" cy="795" rx="27" ry="13" fill="#ffffff" opacity="0.25" />
       </svg>
     </main>
   );
