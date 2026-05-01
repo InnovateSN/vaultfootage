@@ -13,7 +13,7 @@ export default function Home() {
       <svg
         viewBox="0 0 1700 960"
         preserveAspectRatio="xMidYMid slice"
-        aria-label="TamaSocial full-screen hardware shell"
+        aria-label="Bochi Bochi full-screen game hardware shell"
         role="img"
         style={{
           position: "absolute",
@@ -94,6 +94,10 @@ export default function Home() {
             opacity="0.20"
           />
 
+          <text x="800" y="116" textAnchor="middle" fill="#4b1e68" fontFamily="monospace" fontSize="55" fontWeight="900" letterSpacing="8">
+            BOCHI BOCHI WORLD
+          </text>
+
           <path
             d="M225 125 C320 20 500 92 570 42 C620 6 980 6 1030 42 C1100 92 1280 20 1375 125 C1450 208 1440 705 1368 792 C1260 920 340 920 232 792 C160 705 150 208 225 125 Z"
             fill="url(#purple)"
@@ -106,21 +110,28 @@ export default function Home() {
           <rect x="294" y="214" width="1012" height="487" rx="68" fill="#26321f" opacity="0.10" />
 
           <g fill="#182316" fontFamily="monospace" fontWeight="700" opacity="0.92">
-            <text x="350" y="285" fontSize="34">♥ 100%</text>
-            <text x="540" y="285" fontSize="34">FOOD 100%</text>
-            <text x="810" y="285" fontSize="34">FUN 100%</text>
-            <text x="1075" y="285" fontSize="34">CARE 100%</text>
+            <text x="350" y="285" fontSize="34">VIEWS 10.9K</text>
+            <text x="650" y="285" fontSize="34">LORE 001</text>
+            <text x="930" y="285" fontSize="34">COINS 000</text>
             <rect x="350" y="318" width="900" height="5" />
-            <rect x="372" y="365" width="250" height="178" fill="none" stroke="#182316" strokeWidth="5" />
-            <text x="405" y="410" fontSize="33">CRESCI.</text>
-            <text x="405" y="455" fontSize="33">GIOCA.</text>
-            <text x="405" y="500" fontSize="33">CONNETTITI.</text>
-            <circle cx="802" cy="445" r="76" fill="#182316" opacity="0.92" />
-            <circle cx="775" cy="430" r="10" fill="#8fa16d" />
-            <circle cx="828" cy="430" r="10" fill="#8fa16d" />
-            <path d="M770 475 Q802 503 834 475" fill="none" stroke="#8fa16d" strokeWidth="8" />
-            <ellipse cx="802" cy="548" rx="150" ry="25" fill="none" stroke="#182316" strokeWidth="5" opacity="0.62" />
-            <text x="425" y="632" fontSize="36">IL TUO MONDO. IL TUO TAMA.</text>
+
+            <rect x="370" y="356" width="285" height="205" fill="none" stroke="#182316" strokeWidth="5" />
+            <text x="404" y="402" fontSize="34">START</text>
+            <text x="404" y="448" fontSize="34">BOCHI</text>
+            <text x="404" y="494" fontSize="34">QUEST</text>
+            <text x="404" y="540" fontSize="34">NOW</text>
+
+            <g transform="translate(780 455)">
+              <path d="M-140 -95 L-86 -44 L-44 -112 L0 -54 L44 -112 L86 -44 L140 -95 L110 60 L58 116 L-58 116 L-110 60 Z" fill="#182316" />
+              <circle cx="-48" cy="-4" r="17" fill="#8fa16d" />
+              <circle cx="48" cy="-4" r="17" fill="#8fa16d" />
+              <path d="M-70 45 Q0 93 70 45" fill="none" stroke="#8fa16d" strokeWidth="10" />
+              <path d="M-130 -88 L-177 -158 L-88 -105 Z" fill="#182316" />
+              <path d="M130 -88 L177 -158 L88 -105 Z" fill="#182316" />
+            </g>
+
+            <ellipse cx="780" cy="594" rx="192" ry="28" fill="none" stroke="#182316" strokeWidth="5" opacity="0.62" />
+            <text x="398" y="646" fontSize="34">TIKTOK QUESTS. SKINS. MINI GAMES.</text>
           </g>
 
           <circle cx="535" cy="818" r="61" fill="url(#button)" filter="url(#buttonShadow)" />
