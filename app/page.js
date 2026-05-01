@@ -32,11 +32,6 @@ export default function Home() {
             <stop offset="84%" stopColor="#a48258" />
             <stop offset="100%" stopColor="#77583b" />
           </radialGradient>
-          <radialGradient id="bodySpec" cx="28%" cy="12%" r="60%">
-            <stop offset="0%" stopColor="#ffffff" stopOpacity="0.42" />
-            <stop offset="38%" stopColor="#ffffff" stopOpacity="0.13" />
-            <stop offset="100%" stopColor="#ffffff" stopOpacity="0" />
-          </radialGradient>
           <linearGradient id="purple" x1="0" x2="1" y1="0" y2="1">
             <stop offset="0%" stopColor="#efc8ff" />
             <stop offset="34%" stopColor="#ba7be0" />
@@ -83,10 +78,6 @@ export default function Home() {
               d="M-105 455 C-105 120 230 -58 800 -58 C1370 -58 1705 120 1705 455 C1705 805 1365 982 800 982 C235 982 -105 805 -105 455 Z"
               fill="url(#body)"
             />
-            <path
-              d="M-105 455 C-105 120 230 -58 800 -58 C1370 -58 1705 120 1705 455 C1705 805 1365 982 800 982 C235 982 -105 805 -105 455 Z"
-              fill="url(#bodySpec)"
-            />
           </g>
 
           <path
@@ -108,19 +99,11 @@ export default function Home() {
             fill="url(#purple)"
             filter="url(#innerShadow)"
           />
-          <path
-            d="M245 146 C340 62 505 122 585 70 C635 38 965 38 1015 70 C1095 122 1260 62 1355 146"
-            fill="none"
-            stroke="#fff"
-            strokeWidth="18"
-            opacity="0.14"
-          />
 
           <rect x="260" y="180" width="1080" height="555" rx="88" fill="#050606" filter="url(#lcdInset)" />
           <rect x="294" y="214" width="1012" height="487" rx="68" fill="url(#lcd)" />
           <rect x="294" y="214" width="1012" height="487" rx="68" fill="url(#lcdGrid)" />
           <rect x="294" y="214" width="1012" height="487" rx="68" fill="#26321f" opacity="0.10" />
-          <ellipse cx="575" cy="263" rx="340" ry="64" fill="#fffbe0" opacity="0.10" />
 
           <g fill="#182316" fontFamily="monospace" fontWeight="700" opacity="0.92">
             <text x="350" y="285" fontSize="34">♥ 100%</text>
@@ -140,27 +123,9 @@ export default function Home() {
             <text x="425" y="632" fontSize="36">IL TUO MONDO. IL TUO TAMA.</text>
           </g>
 
-          <path
-            d="M1265 165 C1370 322 1374 628 1245 782"
-            fill="none"
-            stroke="#fff7df"
-            strokeWidth="17"
-            opacity="0.24"
-          />
-          <path
-            d="M210 415 C220 245 315 118 485 55"
-            fill="none"
-            stroke="#fff7df"
-            strokeWidth="32"
-            opacity="0.20"
-          />
-
           <circle cx="535" cy="818" r="61" fill="url(#button)" filter="url(#buttonShadow)" />
           <circle cx="800" cy="842" r="64" fill="url(#button)" filter="url(#buttonShadow)" />
           <circle cx="1065" cy="818" r="61" fill="url(#button)" filter="url(#buttonShadow)" />
-          <ellipse cx="512" cy="795" rx="27" ry="13" fill="#ffffff" opacity="0.30" />
-          <ellipse cx="777" cy="818" rx="28" ry="14" fill="#ffffff" opacity="0.30" />
-          <ellipse cx="1042" cy="795" rx="27" ry="13" fill="#ffffff" opacity="0.30" />
         </g>
       </svg>
     </main>
